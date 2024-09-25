@@ -59,6 +59,7 @@ The Docker images were tagged and pushed to **Amazon Elastic Container Registry 
 
 ### 4. Deploy ECS Cluster and Tasks
 An ECS cluster was created using **AWS Fargate** to manage the Docker containers. Each microservice was defined as a task within the ECS cluster.
+
 <img width="748" alt="la commande pour creer dak fichier" src="https://github.com/user-attachments/assets/1cc1f244-bc4a-4284-aaad-2e8ce50ee8dc">
 
 
