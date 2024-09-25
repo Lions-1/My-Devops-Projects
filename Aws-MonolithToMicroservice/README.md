@@ -3,7 +3,8 @@ In this project, I transformed a monolithic application into a microservices-bas
 ## Project Report
 You can read and also download the full  report [here](Building_Microservices_Aws.pdf).
 
-
+Below is a simple overview of the porject 
+ 
 ## Key Technologies
 - **Amazon VPC**: Securely hosts our microservices in an isolated cloud network.
 - **Amazon EC2 & Load Balancer**: Ensures high availability and load balancing across microservices.
@@ -54,8 +55,11 @@ Each microservice was containerized using Docker. Dockerfiles were created for b
 The Docker images were tagged and pushed to **Amazon Elastic Container Registry (ECR)**, where they would be retrieved by the ECS tasks during deployment.
 <img width="924" alt="verif of the ecr" src="https://github.com/user-attachments/assets/91c71392-a2b3-4d6e-9d7f-0939b03872a0">
 
+<img width="701" alt="now docker ecr images" src="https://github.com/user-attachments/assets/659a7eaa-f07d-41c7-8ccd-ad36adcc36b4">
+
 ### 4. Deploy ECS Cluster and Tasks
 An ECS cluster was created using **AWS Fargate** to manage the Docker containers. Each microservice was defined as a task within the ECS cluster.
+<img width="748" alt="la commande pour creer dak fichier" src="https://github.com/user-attachments/assets/1cc1f244-bc4a-4284-aaad-2e8ce50ee8dc">
 
 
 ### 5. Create CI/CD Pipeline
