@@ -1,8 +1,11 @@
 # Microservices Deployment on GKE with Helm, HelmFile, Prometheus, and Grafana
 
+![1_h39yLFkFHazJroZkOuC3kA](https://github.com/user-attachments/assets/4be1740a-6bd1-424e-869c-2ba125edfa74)
+
 ## Overview
 
 This project demonstrates the deployment of a **microservices-based application** on **Google Kubernetes Engine (GKE)** using **Helm** and **HelmFile** for deployment orchestration. The application is monitored using **Prometheus** and **Grafana**, which provide real-time metrics and alerting capabilities. This setup ensures a scalable, observable, and automated deployment pipeline, utilizing best practices in cloud-native architectures.
+
 
 ---
 
@@ -122,6 +125,7 @@ Once deployed, you can access the frontend via the GKE LoadBalancer external IP.
 ## Images of the Working Application
 
 - **Successful Deployment**:
+  
 ![deploymentsuccesgke](https://github.com/user-attachments/assets/c1d8b26a-e643-4f80-87a0-d3b5ce1d31ea)
 
 
