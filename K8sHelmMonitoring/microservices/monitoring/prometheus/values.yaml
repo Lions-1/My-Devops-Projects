@@ -1,0 +1,19 @@
+alertmanager:
+  enabled: false
+
+server:
+  global:
+    scrape_interval: 15s
+    evaluation_interval: 15s
+  resources:
+    requests:
+      memory: 512Mi
+      cpu: 200m
+    limits:
+      memory: 1Gi
+      cpu: 500m
+  persistentVolume:
+    enabled: true
+    size: 10Gi
+    storageClass: standard
+  retention: 7d

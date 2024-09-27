@@ -1,0 +1,19 @@
+appName: servicename
+appImage: gcr.io/google-samples/microservices-demo/servicename
+appVersion: v0.10.1
+containerEnvVars: 
+- name: PORT
+  value: "8080"
+
+servicePort: 5000
+
+readinessProbe:
+  grpc:
+    port: 8080
+  periodSeconds: 5
+
+livenessProbe:
+  grpc:
+    port: 8080
+  periodSeconds: 5
+

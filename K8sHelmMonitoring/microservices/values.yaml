@@ -1,0 +1,11 @@
+nodeExporter:
+  enabled: true
+  hostPID: false
+  hostNetwork: false
+  hostPorts:
+    enabled: false
+  # Modify the hostPath volumes to an allowed directory like /var/log
+  extraHostPathMounts:
+    - name: varlog
+      hostPath: /var/log
+      mountPath: /var/log
