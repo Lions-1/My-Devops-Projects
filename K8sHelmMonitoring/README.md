@@ -1,11 +1,10 @@
 # Microservices Deployment on GKE with Helm, HelmFile, Prometheus, and Grafana
 
-![1_h39yLFkFHazJroZkOuC3kA](https://github.com/user-attachments/assets/4be1740a-6bd1-424e-869c-2ba125edfa74)
+![6075033_a15b](https://github.com/user-attachments/assets/9dbc66ad-696a-49a1-b09f-ca6664692265)
 
 ## Overview
 
-This project demonstrates the deployment of a **microservices-based application** on **Google Kubernetes Engine (GKE)** using **Helm** and **HelmFile** for deployment orchestration. The application is monitored using **Prometheus** and **Grafana**, which provide real-time metrics and alerting capabilities. This setup ensures a scalable, observable, and automated deployment pipeline, utilizing best practices in cloud-native architectures.
-
+This project demonstrates the deployment of a microservices-based application on Google Kubernetes Engine (GKE) using Terraform for infrastructure provisioning, Helm and HelmFile for deployment orchestration, and Prometheus and Grafana for monitoring. The setup ensures a scalable, observable, and automated deployment pipeline, utilizing best practices in cloud-native architectures.
 
 ---
 
@@ -17,12 +16,20 @@ This project demonstrates the deployment of a **microservices-based application*
 The architecture consists of several microservices (e.g., `emailservice`, `cartservice`, `currencyservice`, etc.) communicating with each other within the Kubernetes cluster. Each service has been containerized and deployed on GKE, managed by Kubernetes' deployment and service constructs.
 
 Key components:
+- **Terraform**: Provisions the GKE cluster and sets up the required infrastructure.
 - **Helm & HelmFile**: Used for templating and managing the microservices deployment.
 - **Google Kubernetes Engine (GKE)**: A fully managed Kubernetes service for deploying the application.
 - **Prometheus**: Collects real-time metrics from the application.
 - **Grafana**: Visualizes these metrics and creates dashboards for monitoring.
 
 ---
+## Infrastructure Provisioning with Terraform
+
+Terraform is used to automate the provisioning of the GKE cluster. Here's a brief overview of the Terraform setup:
+
+- **Cluster Creation**: The `main.tf` file provisions a GKE cluster with autopilot mode enabled for optimized resource management.
+- **Resource Management**: Terraform manages the lifecycle of the resources and ensures that the GKE cluster is fully configured before deployment.
+- **Modules**: The configuration is modular and reusable for different environments.
 
 ## Microservices Breakdown
 
@@ -69,7 +76,7 @@ Grafana provides an intuitive interface to visualize Prometheus metrics. Custom 
 
 ## Key Features
 
-- **Automated Deployments**: Helm and HelmFile enable automated and templated deployments across environments.
+- **Automated Deployments**: Terraform provisions the GKE cluster, while Helm and HelmFile handle the automated and templated deployments across environments.
 - **Scalability**: Each microservice has replicas, ensuring the application can handle increased traffic and failure scenarios.
 - **Monitoring**: Real-time monitoring and alerting through Prometheus and Grafana, providing insights into application performance.
 - **Resilience**: Health checks and resource quotas ensure that each microservice is healthy and properly utilizing resources.
@@ -92,8 +99,13 @@ To reproduce the setup in your environment, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-repo/microservices-gke.git
+   git clone https://github.com/Lions-1/My-Devops-Projects/K8sHelmMonitoring.git
       ```
+   ## Provision GKE with Terraform:
+    Run the following command to provision the GKE cluster:
+    terraform init
+    terraform apply
+   but make sure to use your own gke project id
    ## Deploy Helm Charts
 
    Using HelmFile, deploy the application onto your GKE cluster:
@@ -122,6 +134,10 @@ Once deployed, you can access the frontend via the GKE LoadBalancer external IP.
 - **Application in Action**:
 
 ![theWebsite](https://github.com/user-attachments/assets/efde934c-04da-4170-a89c-d76321ceb755)
+
+ - **Deployment**:
+   
+  ![prooff](https://github.com/user-attachments/assets/a40095d0-e68e-4810-9379-35868367022d)
 
 ---
 
