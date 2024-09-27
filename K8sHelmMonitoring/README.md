@@ -43,9 +43,10 @@ Each microservice is deployed with the following features:
 
 ### Example Service Deployment (Helm)
 
-![Service Deployment](path_to_service_deployment_image)
 
 The application deployment is managed via Helm charts for each service, ensuring consistency and ease of deployment across environments. The HelmFile automates the process of applying multiple Helm charts simultaneously, ensuring the entire application is deployed correctly.
+
+![deploymentsuccesgke](https://github.com/user-attachments/assets/c1d8b26a-e643-4f80-87a0-d3b5ce1d31ea)
 
 ---
 
@@ -63,13 +64,6 @@ Grafana provides an intuitive interface to visualize Prometheus metrics. Custom 
 - **Application Performance Dashboard**: Displays request rates, latencies, and error counts.
 
 
-
-### Alerts
-
-Alerts are configured in Prometheus to notify the team of issues such as:
-- High error rates in any microservice.
-- Latency exceeding predefined thresholds.
-- Unhealthy pods (not passing liveness or readiness probes).
 
 ---
 
@@ -124,11 +118,7 @@ Once deployed, you can access the frontend via the GKE LoadBalancer external IP.
 
 ## Images of the Working Application
 
-- **Successful Deployment**:
   
-![deploymentsuccesgke](https://github.com/user-attachments/assets/c1d8b26a-e643-4f80-87a0-d3b5ce1d31ea)
-
-
 - **Application in Action**:
 
 ![theWebsite](https://github.com/user-attachments/assets/efde934c-04da-4170-a89c-d76321ceb755)
